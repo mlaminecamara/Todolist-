@@ -1,9 +1,27 @@
-<div>
-    To-do-List Moh, Camara
-<div>
-  <input type="text">
-</div>
+<section class="todoapp">
+<header class="header">
+<h1> Todos</h1>
 
-<div>
-  <button>ADD</button>
-</div>
+  <input class="form-control" type="text" [(ngModel)]="newTodo">
+<button class="btn btn-primary" [disabled] = "!allowTodoCreation" (click)="onCreateTodo()">ADD</button>
+</header>
+
+<div class="main">
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos;let i=index" class="todo">
+      <div class="view">
+        <input type="checkbox" [checked]="todo.todoStatus" (change)="todo.todoStatus = !todo.todoStatus">
+        <!-- <input type="checkbox" (change)="onComplete($event)"> -->
+        <p [ngClass]="{'completed':todo.todoStatus}">{{todo.name}}</p>
+        <button class="btn btn-danger" (click)="onDeleteTodo(todo, i)"> delete todo</button>
+      </div>
+    </li>
+  </ul>
+  <button class="btn btn-danger" (click)="deleteSelected()">DeleteSelected</button>
+</div>  
+
+<footer class="footer">
+
+</footer>
+
+</section>
