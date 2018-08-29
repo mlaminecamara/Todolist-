@@ -46,15 +46,4 @@ export class TodoComponent implements OnInit {
       this.todos = this.todos.filter((todo)=> !todo.todoStatus);
     }
 
-  // onComplete(event: Event){
-  //   if((<HTMLInputElement>event.target).checked){
-  //     this.todoStatus = true;
-  //     //console.log(this.todoStatus);
-  //   }
-  //   else{
-  //     this.todoStatus = false;
-  //   }
-
-  // }
-
 }

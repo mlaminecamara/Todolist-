@@ -23,3 +23,20 @@ describe('TodoComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+describe('todo', () =>{
+
+})
+
+describe('onCreateTodo', () =>{
+
+  it('should add a task in the todo list', () =>{
+    const result = onCreateTodo("first task");
+    expect(result).toBe(["first task"])
+  })
+  
+})
+
+describe('onDeleteTodo', () =>{
+  
+})
