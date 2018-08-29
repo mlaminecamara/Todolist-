@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoComponent } from './todo.component';
+import { AppComponent } from '../app.component';
+import { FormsModule } from '@angular/forms'; 
 
 describe('TodoComponent', () => {
   let component: TodoComponent;
@@ -8,7 +10,8 @@ describe('TodoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoComponent ]
+      declarations: [ TodoComponent, AppComponent ],
+      imports:[FormsModule]
     })
     .compileComponents();
   }));
@@ -24,19 +27,3 @@ describe('TodoComponent', () => {
   });
 });
 
-describe('todo', () =>{
-
-})
-
-describe('onCreateTodo', () =>{
-
-  it('should add a task in the todo list', () =>{
-    const result = onCreateTodo("first task");
-    expect(result).toBe(["first task"])
-  })
-  
-})
-
-describe('onDeleteTodo', () =>{
-  
-})
