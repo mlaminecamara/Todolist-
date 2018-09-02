@@ -9,7 +9,7 @@
     <li *ngFor="let todo of todos;let i=index" class="todo">
       <div class="view">
         <input type="checkbox" [checked]="todo.todoStatus" (change)="todo.todoStatus = !todo.todoStatus" class="toggle">
-        <label [ngClass]="{'completed':todo.todoStatus}">{{todo.name}}</label>
+        <label [ngClass]="{'completed':todo.todoStatus}">{{ todo.name }}</label>
         <button class="" (click)="onDeleteTodo(todo, i)"> delete todo</button>
       </div>
     </li>

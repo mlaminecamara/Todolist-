@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { FormsModule } from '@angular/forms'; 
 
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,7 +25,7 @@ describe('AppComponent', () => {
     const todo = fixture.debugElement.componentInstance;
 
     expect(todo.todos).toEqual([]);
-    
+
     expect(todo.todos).toBeNull
 
   }));
